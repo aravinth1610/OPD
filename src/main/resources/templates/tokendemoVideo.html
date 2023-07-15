@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Token Tutorial Video</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/etiicos-logo.png" rel="icon">
+  <link href="assets/img/etiicos-logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+ 
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+ 
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="#" class="logo d-flex align-items-center">
+        <img src="assets/img/etiicos-logo.png" alt="">
+        <span class="d-none d-lg-block">Nurse Calling</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">  <!--  -->
+    
+      <a href="#" class="logo d-flex align-items-center">
+        <span id="hospitalid" sec:authentication="principal.hospital_id"><span >HospitalID</span></span>
+      </a> 
+  
+     <a href="#" class="logo d-flex align-items-center">
+      <span ><a id=logout th:href="@{/logout}">Logout</a></span>
+     </a>
+     
+    </nav><!-- End ID  -->
+   
+  </header><!-- End Header -->
+  
+
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar" >
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="home">
+          <i class="bi bi-x-circle"></i>
+          <span>Active Calls</span>
+        </a>
+      </li><!-- End Dashboard Nav -->   
+      
+    </ul>
+    
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="log">
+          <i class="bi bi-clock-history"></i>
+          <span>Call Log</span>
+        </a>
+      </li><!-- End Dashboard Nav -->   
+    </ul>
+    
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="payment">
+          <i class="bi bi-credit-card-2-front"></i>
+          <span>Payment</span>
+        </a>
+      </li><!-- End Dashboard Nav -->   
+        </ul>
+        
+        <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="faq">
+          <i class="bi bi-question-octagon"></i>
+          <span>OPD & Token FAQ</span>
+        </a>
+      </li><!-- End Dashboard Nav -->   
+        </ul>
+        
+       <ul class="sidebar-nav" id="sidebar-nav" style="height: 53vh;">
+      <li class="nav-item">
+       <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-play-circle"></i>
+          <span>Tutorial Videos</span>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+        <li>
+            <a href="opdtutorial">
+              <i class="bi bi-circle"></i><span>OPD Tutorial</span>
+            </a>
+          </li>
+          <li>
+            <a href="tokentutorial" class="active">
+              <i class="bi bi-circle"></i><span>Token Tutorial</span>
+            </a>
+          </li>
+          <li>
+            <a href="whatapptutorial">
+              <i class="bi bi-circle"></i><span>Whatapp Integration Tutorial</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Dashboard Nav -->   
+        </ul>
+        
+       
+  <div class="container-fluid text-black">
+  <div>
+  <h4>To Customer Support</h4>
+  <div style="font-size: 14px;">
+  <p>Contact Number : +91 99402 57365</p> 
+  <p>Ticket Raising Link : <a href="https://etiicos-support.freshdesk.com/support/tickets/new?ticket_form=technical_support">Ticket Raising</a></p> 
+   </div> 
+  <p style="text-align: center;"><img width="120" height="120" src="assets/img/techincalsupportqr.jpeg" alt="qrcode"></p>
+  </div>
+  
+</div>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Token Tutorial</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a>Home</a></li>
+          <li class="breadcrumb-item active">Token Tutorial Video</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+    
+    <div class="container py-3">
+    
+    <div class="row">
+    <div class="col-lg-12">
+    <div>
+   
+    <h4>Step 1 :</h4>
+    <video width="950" height="240" controls>
+    <source src="assets/video/tokenv1.mp4" type="video/mp4">
+    </video>
+   <div style="padding: 15px"></div> 
+    <h4>Step 2 :</h4>
+    <video width="950" height="240" controls>
+    <source src="assets/video/tokenv2.mp4" type="video/mp4">
+    </video>
+    <div style="padding: 15px"></div> 
+    <h4>Step 3 :</h4>
+    <video width="950" height="240" controls>
+    <source src="assets/video/tokenv3.mp4" type="video/mp4">
+    </video>
+    <div style="padding: 15px"></div> 
+    <h4>Step 4 :</h4>
+    <video width="950" height="240" controls>
+    <source src="assets/video/tokenv4.mp4" type="video/mp4">
+    </video>
+    <div style="padding: 15px"></div> 
+    <h4>Step 5 :</h4>
+    <video width="950" height="240" controls>
+    <source src="assets/video/tokenv5.mp4" type="video/mp4">
+    </video>
+    </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+  </main><!-- End #main -->
+
+ 
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+   <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+
+</body>
+
+</html>

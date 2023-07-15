@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="images/etiicos-logo.png" rel="icon">
+    <link href="imgages/etiicos-logo.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" th:href="@{css/style.css}">
+    <title>OPD Receptionist Signup</title>
+  </head>
+	
+	<body class="img js-fullheight" style="background-image: url(images/stethoscope-copy-space.jpg);">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">OPT Calling System</h2>
+				</div>
+			</div>
+			<div id="incorrectmail"></div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Sign Up</h3>
+		      	<!-- <form  class="signin-form"> -->  <!-- th:action="@{/signup}" method="post" th:object="${user}" -->
+		      		
+					  <div class="form-group">
+						<input type="email" id="gmail"  autofocus="autofocus" class="form-control" placeholder="Email Address" required /><!-- th:field="*{gmail}" -->
+					</div>
+					<div class="form-group">
+	            	<input type="button" id="registerbtn" value="SUBMIT" class="form-control btn btn-primary submit px-3" />
+	            	
+	            </div>
+	            <div id="registerdetails" style="display: block"></div>
+	            <div id="registercontent" style="display: block"></div>
+	           
+			  <div id="emailHelp" class="form-text text-center mb-5 w-100 text-center ">Already Have An Account ? <a href="#" id="signinform" class="w-100 text-center"> Signin</a>
+			  </div>
+	          </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <script th:src="@{js/jquery.min.js}"></script>
+  <script th:src="@{js/popper.js}"></script>
+  <script th:src="@{js/bootstrap.min.js}"></script>
+  <script th:src="@{js/main.js}"></script>
+  <script th:src="@{js/validation.js}"></script>
+
+	</body>
+</html>
+

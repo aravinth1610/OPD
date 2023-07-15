@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="images/etiicos-logo.png" rel="icon">
+    <link href="imgages/etiicos-logo.png" rel="apple-touch-icon">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" th:href="@{css/style.css}">
+	
+    <title>OPD Receptionist Login</title>
+
+</head>
+<body class="img js-fullheight" style="background-image: url(images/stethoscope-copy-space.jpg);">
+
+     
+
+  <section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">OPD Calling System</h2>
+				</div>
+			</div>
+			
+			<div th:if="${param.error}" >
+        <h3 class="errorlogin">Invalid username and password</h3>
+    </div>
+    
+         <div th:if="${param.logout}" >
+        <h3 class="errorlogin">You have been logged out.</h3>
+    </div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Sign in</h3>
+		      	<form th:action="@{/login}" method="post" class="signin-form">
+		      		<div class="form-group">
+		      			<input type="email"  name="gmail" class="form-control" placeholder="Gmail Address" required />
+		      		</div>
+	            <div class="form-group">
+	              <input id="password-field" name="password" type="password" class="form-control" placeholder="Password" required />
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+	            <div class="form-group">
+	            	<input type="submit" value="Login" class="form-control btn btn-primary submit px-3" />
+	            </div>
+	            <div class="form-group d-md-flex">
+	            	<div class="w-50">
+		            	<label class="checkbox-wrap checkbox-primary">Remember Me
+									  <input type="checkbox" name="remember-me" />
+									  <span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="w-50 text-md-right">
+									<a href="#" id="forgotpasswordform" style="color: #fff">Forgot Password</a>
+								</div>
+								
+	            </div>
+	          </form>
+	        <div id="emailHelp" class="form-text text-center mb-5 w-100 text-center ">Not Registered? 
+			  <a href="#" id="registerform" class="w-100 text-center"> Create an Account</a>
+			  </div>
+	          </div>
+			  </div>
+			</div>
+		</div>
+	</section>
+
+  <script th:src="@{js/jquery.min.js}"></script>
+  <script th:src="@{js/popper.js}"></script>
+  <script th:src="@{js/bootstrap.min.js}"></script>
+  <script th:src="@{js/main.js}"></script>
+  <script th:src="@{js/validation.js}"></script>
+
+</body>
+</html>

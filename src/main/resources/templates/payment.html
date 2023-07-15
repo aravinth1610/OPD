@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="light-style customizer-hide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="/assets/"
+  data-template="vertical-menu-template-free"
+  xmlns:th="http://www.thymeleaf.org"
+>
+
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    
+    <title>Smart OPD | Token system Payment</title>
+    
+    <link href="images/etiicos-logo.png" rel="icon">
+    <link href="imgages/etiicos-logo.png" rel="apple-touch-icon">
+    
+   <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+  
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+
+  
+    <!-- Page CSS -->
+    <!-- Page -->
+    <link rel="stylesheet" href="assets/vendor/css/pages/page-auth.css" />
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+
+    <script src="assets/authjs/config.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> 
+    
+    
+    
+  </head>
+	
+	<body>
+	 <div class="container-xxl">
+      <div class="authentication-wrapper authentication-basic container-p-y" style="min-height: 71vh;">
+        <div class="authentication-inner py-4">
+          <!-- Forgot Password -->
+          <div class="card">
+            <div class="card-body">
+              <!-- Logo -->
+              <div class="app-brand justify-content-center">
+                <a href="payment" class="app-brand-link gap-2">
+                  <img src="assets/img/etiicos-logo.png" alt="">
+                  <span style="font-size: 15px" class="demo text-body fw-bolder">Smart OPD | Token system Payment</span>
+                </a>
+              </div>
+              <!-- /Logo -->
+              <div style="text-align: center;">
+              <h4 class="mb-2">Payment Info</h4>
+              <div id="paymentdetails">
+              <h3 class="mb-1 text-dark">Rs.<span id="perprice"></span></h3>
+              <div>/Per Doctor/month</div>
+              <div class="mb-3">Includes 18% GST</div>
+              </div>
+              </div>
+              <div style="text-align: center;" id="incorrectmail"></div>
+              <div>
+              
+                  <div class="mb-3">
+                  <label for="gmail" class="form-label">OPD Register Gmail</label>
+                 <div><input type="text" class="form-control" id="gmail" autofocus="autofocus" /></div>
+                 </div>
+               <div id="gmailconfirm"><button type="submit"  id="mailconfirm" class="btn btn-primary d-grid w-100">confirm</button></div>
+              </div>
+              <div id="otpverifytag"></div>
+              <div id="paymentContent"></div>
+                  <div class="py-3 text-center d-flex justify-content-between">
+                <a href="home">
+                  <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
+                  Back to Home
+                </a>
+                <a th:href="@{/logout}">
+                  <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
+                  Back to login
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /Forgot Password -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid text-black">
+  <div style="text-align: center;">
+  <h4>To Customer Support :</h4>
+  <div style="font-size: 14px;">
+  <p>Contact Number : +91 99402 57365</p> 
+  <p>Ticket Raising Link : <a href="https://etiicos-support.freshdesk.com/support/tickets/new?ticket_form=technical_support">Ticket Raising</a></p> 
+   </div> 
+  <p><img width="120" height="120" src="assets/img/techincalsupportqr.jpeg" alt="qrcode"></p>
+  </div>
+  
+ </div>
+
+    <!-- / Content -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script type="text/javascript" src="assets/js/payment.js"></script>
+    
+  </body>
+</html>
+
+

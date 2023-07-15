@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>OPD Doctor Setting</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicons -->
+  <link href="assets/img/etiicos-logo.png" rel="icon">
+  <link href="assets/img/etiicos-logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="doctorDashboard" class="logo d-flex align-items-center">
+        <img src="assets/img/etiicos-logo.png" alt="">
+        <span class="d-none d-lg-block">Doctor Mobile </span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+    
+      <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown pe-3"> 
+			
+			  <a href="#" class="logo d-flex align-items-center">
+             <h1><span id="hospitalid"></span></h1>
+      </a>         
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    
+          </a><!-- End Profile Iamge Icon -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+    <div class="col-2 col-md-1">
+   
+     </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item collapsed" >
+        <a class="nav-link collapsed" href="doctorDashboard">
+          <i class="fa-solid fa-hospital"></i>
+          <span>Doctor</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item collapsed" >
+        <a class="nav-link collapsed" href="doctorlog">
+          <i class="bi bi-clock-history"></i>
+          <span>Log</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item collapsed" >
+        <a class="nav-link collapsed" href="doctorSettings">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+ <li class="nav-item collapsed" >
+        <a class="nav-link collapsed" href="doctorSettings">
+          <i class="bi bi-box-arrow-left"></i>
+          <span id="doctorlogout" >LogOut</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+    </ul>
+  </aside><!-- End Sidebar-->
+
+
+
+  <main id="main" class="main">
+
+<div class="row">
+
+    <div class="pagetitle col-lg-9 col-sm-4">
+      <h1>Doctor Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="doctorDashboard">Home</a></li>
+          <li class="breadcrumb-item">Doctor</li>
+          <li class="breadcrumb-item active">Settings</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    
+ <div class="col-lg-3 col-sm-8">
+  <span> <label class="text-dark">Ward No</label></span><br>
+  <input type="text" placeholder="Edit Your Ward ... " id="wardTextId" spellcheck="true" readonly="readonly" style="margin-right:6px;border: inset;" ></input><button onclick="editCard(this)" value="262e" type="button" class="btn btn-light" style="margin-right:5px"><i class="bi bi-pencil-square"> </i></button><button onclick="saveCard(this)" value="262e" type="button" class="btn btn-success" style="margin-right:5px"><i class="bi bi-check-circle"> </i></button><button onclick="deleteCard(this)" value="262e" type="button" class="btn btn-danger" style="margin-right:5px"><i class="bi bi-trash"> </i></button>	 
+ </div>   
+   </div> 
+    <button id="addButton" type="button" class="btn btn-light btn-lg"  >
+      <i class="bi bi-plus-circle-fill" ></i>
+    </button>
+
+
+    <section class="section" id="addPanel">
+ 
+    </section>
+
+  </main><!-- End #main -->
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <script  src="js/doctorhome.js"></script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script  src="assets/js/doctorSettings.js"></script>
+  <script  src="assets/js/doctorlogout.js"></script>
+
+</body>
+
+</html>
